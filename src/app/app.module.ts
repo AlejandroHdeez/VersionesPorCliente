@@ -3,14 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddAprovadoresComponent } from './componentes/add-aprovadores/add-aprovadores.component';
 import { AddClientesComponent } from './componentes/add-clientes/add-clientes.component';
 import { AddProductosComponent } from './componentes/add-productos/add-productos.component';
 import { AddSolicitantesComponent } from './componentes/add-solicitantes/add-solicitantes.component';
 import { AddSolicitudComponent } from './componentes/add-solicitud/add-solicitud.component';
 import { AddSolucionesVerticalesComponent } from './componentes/add-soluciones-verticales/add-soluciones-verticales.component';
 import { AprobadoresComponent } from './componentes/aprobadores/aprobadores.component';
-import { AddaprobadoresComponent } from './componentes/addaprobadores/addaprobadores.component';
 import { AddAprobadoresComponent } from './componentes/add-aprobadores/add-aprobadores.component';
 import { ClientesPageComponent } from './componentes/clientes-page/clientes-page.component';
 import { HomePageComponent } from './componentes/home-page/home-page.component';
@@ -26,14 +24,12 @@ import { SolicitantesComponent } from './componentes/solicitantes/solicitantes.c
 @NgModule({
   declarations: [
     AppComponent,
-    AddAprovadoresComponent,
     AddClientesComponent,
     AddProductosComponent,
     AddSolicitantesComponent,
     AddSolicitudComponent,
     AddSolucionesVerticalesComponent,
     AprobadoresComponent,
-    AddaprobadoresComponent,
     AddAprobadoresComponent,
     ClientesPageComponent,
     HomePageComponent,
