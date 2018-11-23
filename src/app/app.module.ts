@@ -20,6 +20,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { RegisterPageComponent } from './componentes/register-page/register-page.component';
 import { SolicitantesComponent } from './componentes/solicitantes/solicitantes.component';
+import { SolicitudesComponent } from './componentes/solicitudes/solicitudes.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { SolicitantesComponent } from './componentes/solicitantes/solicitantes.c
     NavbarComponent,
     ProductosComponent,
     RegisterPageComponent,
-    SolicitantesComponent
+    SolicitantesComponent,
+    SolicitudesComponent
   ],
   imports: [
     BrowserModule,

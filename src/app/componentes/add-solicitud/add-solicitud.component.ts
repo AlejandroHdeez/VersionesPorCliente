@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-solicitud',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddSolicitudComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  verificar(): void{
+    if(true){
+    this.router.navigate(['/solicitudes'])
+  }else{
+  
+  }
+  }
+
+  verificar2(): void{
+    if(true){
+    this.router.navigate(['/infoSoluciones'])
+  }else{
+  
+  }
   }
 
 }
