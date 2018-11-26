@@ -21,6 +21,7 @@ import { ProductosComponent } from './componentes/productos/productos.component'
 import { RegisterPageComponent } from './componentes/register-page/register-page.component';
 import { SolicitantesComponent } from './componentes/solicitantes/solicitantes.component';
 import { SolicitudesComponent } from './componentes/solicitudes/solicitudes.component';
+import { ADSolicitudesComponent } from './componentes/adsolicitudes/adsolicitudes.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SolicitudesComponent } from './componentes/solicitudes/solicitudes.comp
     ProductosComponent,
     RegisterPageComponent,
     SolicitantesComponent,
-    SolicitudesComponent
+    SolicitudesComponent,
+    ADSolicitudesComponent
   ],
   imports: [
     BrowserModule,

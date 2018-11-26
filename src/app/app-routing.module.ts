@@ -17,6 +17,7 @@ import { AddSolucionesVerticalesComponent } from './componentes/add-soluciones-v
 import { InfoSolucionesVerticalesComponent } from './componentes/info-soluciones-verticales/info-soluciones-verticales.component';
 import { AddSolicitudComponent } from './componentes/add-solicitud/add-solicitud.component';
 import { SolicitudesComponent } from './componentes/solicitudes/solicitudes.component';
+import { ADSolicitudesComponent } from './componentes/adsolicitudes/adsolicitudes.component';
 
 const routes: Routes = [
   {path: 'home', component: HomePageComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'infoSoluciones', component: InfoSolucionesVerticalesComponent},
   {path: 'addSolicitud', component: AddSolicitudComponent},
   {path: 'solicitudes', component: SolicitudesComponent},
+  {path: 'adsolicitud', component: ADSolicitudesComponent},
 ];
 
 @NgModule({

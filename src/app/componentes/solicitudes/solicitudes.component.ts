@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-solicitudes',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolicitudesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  verificar(): void{
+    if(true){
+    this.router.navigate(['/adsolicitud'])
+  }else{
+  
+  }
   }
 
 }
