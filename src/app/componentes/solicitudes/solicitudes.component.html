@@ -51,7 +51,7 @@
                           <input class="form-control" id="disabledInput" type="text" placeholder="Aprobada" disabled="">
                       </div>
                     </div>
-                    <button type="button" class="btn btn-outline-success btn-block" (click)="verificar()">Estado</button>
+                    <button type="button" class="btn btn-outline-success btn-block" (click)="estadoSol()">Estado</button>
                 </div>
               </div>
               <!-- FORM DE SOLICITUD DENEGADA -->
@@ -72,11 +72,15 @@
                             <input class="form-control" id="disabledInput" type="text" placeholder="Denegada" disabled="">
                         </div>
                       </div>
-                      <button type="button" class="btn btn-outline-primary btn-block" (click)="verificar()">Estado</button>
+                      <button type="button" class="btn btn-outline-primary btn-block" (click)="estadoSol()">Estado</button>
                   </div>
                 </div>
               </div>
               <hr class="my-3">
+              <div align="center">
+                    <button style="margin-left: 10px;"  type="button" class="btn btn-primary btn-lg mt-2" (click)="regresar1()">
+                        <i class="fa fa-hand-o-left "></i> Regresar</button>
+                      </div>
         </form>
       </div>
     </div>

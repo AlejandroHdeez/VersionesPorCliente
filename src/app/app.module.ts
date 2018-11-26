@@ -22,6 +22,7 @@ import { RegisterPageComponent } from './componentes/register-page/register-page
 import { SolicitantesComponent } from './componentes/solicitantes/solicitantes.component';
 import { SolicitudesComponent } from './componentes/solicitudes/solicitudes.component';
 import { ADSolicitudesComponent } from './componentes/adsolicitudes/adsolicitudes.component';
+import { EstadoSolicitudComponent } from './componentes/estado-solicitud/estado-solicitud.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ADSolicitudesComponent } from './componentes/adsolicitudes/adsolicitude
     RegisterPageComponent,
     SolicitantesComponent,
     SolicitudesComponent,
-    ADSolicitudesComponent
+    ADSolicitudesComponent,
+    EstadoSolicitudComponent
   ],
   imports: [
     BrowserModule,

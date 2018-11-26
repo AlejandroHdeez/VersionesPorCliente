@@ -7,34 +7,35 @@
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label mt-4">Solicitante:</label>
             <div class="col-sm-10">
-              <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+              <input class="form-control mt-4" id="disabledInput" type="text" placeholder="Alejandro Hernández" disabled="">
             </div>
           </div>
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label mt-4">Fecha:</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control mt-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your user">
+              <input class="form-control mt-4" id="disabledInput" type="text" placeholder="26/11/2018" disabled="">
             </div>
           </div>
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label mt-4">Programa:</label>
             <div class="col-sm-10">
-              <input type="password" name="password" id="password" class="form-control mt-4" placeholder="Enter your password">
+              <input class="form-control mt-4" id="disabledInput" type="text" placeholder="Monitor" disabled="">
             </div>
           </div>
           <div class="form-group row">
               <label for="staticEmail" class="col-sm-2 col-form-label mt-4">Descripcion:</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control mt-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+                <input class="form-control mt-4" id="disabledInput" type="text" placeholder="Modificacion en algunos aspectos" disabled="">
               </div>
             </div>
             <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label mt-4">Comentario:</label>
                 <div class="col-sm-10 mt-4">
+                    <textarea class="form-control" id="exampleTextarea" rows="3" style="height: 116px;"></textarea>
                 </div>
               </div>
-          <button type="button"  class="btn btn-success btn-block btn-lg" (click)="verificar()">APROBAR</button>
-          <button type="button"  class="btn btn-primary btn-block btn-lg" (click)="verificar()">DENEGAR</button>
+          <button type="button"  class="btn btn-success btn-block btn-lg" (click)="verificar()"> <i class="fa fa-check-square-o"> APROBAR</i></button>
+          <button type="button"  class="btn btn-primary btn-block btn-lg" (click)="verificar()"> <i class="fa fa-minus-circle">     DENEGAR</i> </button>
         </form>
       </div>
     </div>

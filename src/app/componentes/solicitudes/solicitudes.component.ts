@@ -21,4 +21,20 @@ export class SolicitudesComponent implements OnInit {
   }
   }
 
+  estadoSol(): void{
+    if(true){
+    this.router.navigate(['/estadoSolicitud'])
+  }else{
+  
+  }
+  }
+
+  regresar1(): void{
+    if(true){
+    this.router.navigate(['/addSolicitud'])
+  }else{
+  
+  }
+  }
+
 }

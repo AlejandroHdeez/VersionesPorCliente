@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-adsolicitudes',
-  templateUrl: './adsolicitudes.component.html',
-  styleUrls: ['./adsolicitudes.component.scss']
+  selector: 'app-estado-solicitud',
+  templateUrl: './estado-solicitud.component.html',
+  styleUrls: ['./estado-solicitud.component.scss']
 })
-export class ADSolicitudesComponent implements OnInit {
+export class EstadoSolicitudComponent implements OnInit {
 
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  verificar(): void{
+  regresar1(): void{
     if(true){
     this.router.navigate(['/solicitudes'])
   }else{
