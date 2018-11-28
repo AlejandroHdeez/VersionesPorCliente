@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddClientesComponent } from './componentes/add-clientes/add-clientes.component';
@@ -23,6 +26,18 @@ import { SolicitantesComponent } from './componentes/solicitantes/solicitantes.c
 import { SolicitudesComponent } from './componentes/solicitudes/solicitudes.component';
 import { ADSolicitudesComponent } from './componentes/adsolicitudes/adsolicitudes.component';
 import { EstadoSolicitudComponent } from './componentes/estado-solicitud/estado-solicitud.component';
+
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashMessagesService} from 'angular2-flash-messages';
+import {ToastrModule} from 'ngx-toastr';
+
+import { ClientesService } from './services/clientes.service';
+
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {environment} from '../environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -49,10 +64,18 @@ import { EstadoSolicitudComponent } from './componentes/estado-solicitud/estado-
     EstadoSolicitudComponent
   ],
   imports: [
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    FlashMessagesModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ClientesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
