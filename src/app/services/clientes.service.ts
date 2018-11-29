@@ -11,6 +11,7 @@ export class ClientesService {
   clientesList: AngularFireList <any>;
   selectedClientes: Clientes = new Clientes();
   constructor(private firebase: AngularFireDatabase) { }
+  
   getClientes(){
     return this.clientesList = this.firebase.list('Clientes')
   }
