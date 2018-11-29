@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
-import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
 import { ClientesService } from '../../services/clientes.service';
-import { ToastrService } from 'ngx-toastr';
-import { FlashMessagesModule, FlashMessagesService } from "angular2-flash-messages";
-import { element } from '@angular/core/src/render3/instructions';
 import { Clientes } from 'src/app/models/Clientes';
 import { NgForm } from '@angular/forms';
+import { ClientesAService } from 'src/app/services/clientes-a.service';
+import { ClientesA } from 'src/app/models/ClientesA';
 
 @Component({
   selector: 'app-add-clientes',
@@ -17,8 +15,10 @@ import { NgForm } from '@angular/forms';
 export class AddClientesComponent implements OnInit {
   clientesList: Clientes[];
   datos = [];
+  d:string;
   ref:any = firebase.database().ref('Clientes');
-  constructor(private router: Router, private clientesService: ClientesService) {
+  ref2:any = firebase.database().ref('ClientesA');
+  constructor(private router: Router, private clientesService: ClientesService, private clientesAService: ClientesAService) {
     let newDato = this.ref.push();
     //newDato.set({
       //name: "BANTRAB",
@@ -44,13 +44,35 @@ export class AddClientesComponent implements OnInit {
         })
 }
 
-onEdit(cliente: Clientes){
-  this.clientesService.selectedClientes = Object.assign({}, cliente);
+onSubmit(clientesForm: NgForm){
+  this.clientesAService.insertCliente(
+    this.clientesService.selectedClientes.name,
+    this.clientesService.selectedClientes.description
+  );
+  /*if(clientesForm.value.$key == null){
+    
+  }else{
+
+  }*/
 }
 
-  verificar2(): void{
+onEdit(clientes: Clientes){
+  this.clientesAService.selectedClientesA = Object.assign({}, clientes);
+  /*this.clientesAService.insertCliente(
+    name,
+    description
+  );*/
+}
+
+  verificar2(name:any, description:string){
     if(true){
     this.router.navigate(['/clientes'])
+
+    let newClient = this.ref2.push();
+    newClient.set({
+      name: name,
+      description: description
+    })
   }else{
 
   }
@@ -59,7 +81,7 @@ onEdit(cliente: Clientes){
 resetForm(clienteForm?: NgForm){
   if(clienteForm != null){
     clienteForm.reset();
-    this.clientesService.selectedClientes = new Clientes();
+    this.clientesService.selectedClientes = new ClientesA();
   }
 }
 

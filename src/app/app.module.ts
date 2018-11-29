@@ -37,6 +37,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
+import { ClientesAService } from './services/clientes-a.service';
 
 
 @NgModule({
@@ -75,7 +76,7 @@ import {environment} from '../environments/environment';
     FlashMessagesModule,
     ReactiveFormsModule
   ],
-  providers: [ClientesService],
+  providers: [ClientesService, ClientesAService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

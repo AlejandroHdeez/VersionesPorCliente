@@ -26,6 +26,15 @@
     </div>
   </div>
 <br>
-
+<div>
+  <table class="table table-sm table-hover mt-4">
+    <tbody>
+      <tr *ngFor="let a of datos" class="table-danger">
+        <td>{{a.name}}</td>
+        <td>{{a.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
