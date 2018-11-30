@@ -4,21 +4,19 @@
       <div class="card-body">
         <h1 class="text-center">CLIENTES</h1>
         <hr class="my-3">
-        <div class="cartas">
-
-              <div class="card border-dark mb-3" style="max-width: 18rem; float: left; margin-left: 37rem;" *ngFor="let a of datos">
+          <div class="scroll">
+              <div class="card border-dark mb-3" style="max-width: 18rem; float: left; margin-left: 2rem;" *ngFor="let a of datos">
                 <div class="card-header ">
                 <img style="height: 200px; width: 80%; display: block; margin: 10px auto;" src="" alt="Card image">
                 <div class="card-body">
                   <h4 class="card-title text-center">{{a.name}}</h4>
-                  <hr class="my-4">
-                  <p class="card-text">{{a.description}}</p>
+                  <hr class="my-3">
+                  <p class="card-text text-justify">{{a.description}}</p>
                 </div>
                 </div>
                 <button type="button" class="btn btn-outline-primary" (click)="verificar3()">Información</button>
-              </div> 
           </div>
-         
+        </div>
           <br>      
         </div>
         <hr class="my-3">
